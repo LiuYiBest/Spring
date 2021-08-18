@@ -1,5 +1,9 @@
 <template>
-  <button @click="toggle" :class="{ checked: value }">
+  <button
+    class="spring-switch"
+    @click="toggle"
+    :class="{ 'spring-checked': value }"
+  >
     <span></span>
   </button>
   <div>{{ value }}</div>
@@ -21,10 +25,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
-button {
+.spring-switch {
   height: $h;
   width: $h * 2;
   border: none;
@@ -44,7 +48,7 @@ button {
   &:focus {
     outline: none;
   }
-  &.checked {
+  &.spring-checked {
     background: #409eff;
     > span {
       left: calc(24px);
@@ -56,7 +60,7 @@ button {
       width: $h2 + 4px;
     }
   }
-  &.checked:active {
+  &.spring-checked:active {
     > span {
       width: $h2 + 4px;
       margin-left: -4px;
