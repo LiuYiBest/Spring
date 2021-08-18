@@ -20,7 +20,9 @@
           </li>
         </ol>
       </aside>
-      <main>主内容</main>
+      <main>
+        <router-view />
+      </main>
     </div>
   </div>
 </template>
@@ -33,7 +35,7 @@ export default {
   components: { Topnav },
   setup() {
     const menuVisible = inject<Ref<boolean>>('menuVisible') // get
-    //return之后模板才能用
+    //return之后才能用
     return { menuVisible }
   },
 }
