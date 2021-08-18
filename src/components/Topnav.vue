@@ -1,6 +1,6 @@
 <template>
   <div class="topnav">
-    <div class="logo">log</div>
+    <div class="logo" @click="toggleMenu">logo</div>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
@@ -8,7 +8,20 @@
   </div>
 </template>
 <script lang="ts">
-export default {};
+import { inject, Ref } from 'vue'
+
+export default {
+  setup() {
+    //inject添加APP.vue的provide变量
+    const menuVisible = inject<Ref<boolean>>('menuVisible') // get
+
+    //切换列表显示
+    const toggleMenu = () => {
+      menuVisible.value = !menuVisible.value
+    }
+    return { toggleMenu }
+  },
+}
 </script>
 
 <style lang="scss" scoped>

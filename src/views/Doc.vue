@@ -2,9 +2,9 @@
   <div>
     <Topnav />
     <div class="content">
-      <aside>
+      <aside v-if="menuVisible">
         <h2>组件列表</h2>
-        <!-- 使用嵌套路由机制 -->
+        <!-- 使用嵌套路由 -->
         <ol>
           <li>
             <router-link to="/doc/switch">Switch 组件</router-link>
@@ -24,14 +24,21 @@
     </div>
   </div>
 </template>
-  <script lang="ts">
-import Topnav from "../components/Topnav.vue";
+
+<script lang="ts">
+import Topnav from '../components/Topnav.vue'
+import { inject, Ref } from 'vue'
+
 export default {
   components: { Topnav },
-};
+  setup() {
+    const menuVisible = inject<Ref<boolean>>('menuVisible') // get
+    //return之后模板才能用
+    return { menuVisible }
+  },
+}
 </script>
 
-</script>
 <style lang="scss" scoped>
 aside {
   background: lightblue;
