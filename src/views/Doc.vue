@@ -41,7 +41,6 @@ export default {
 }
 </script>
 
-</script>
 <style lang="scss" scoped>
 .layout {
   display: flex;
@@ -67,7 +66,7 @@ export default {
   > main {
     flex-grow: 1;
     padding: 16px;
-    background: lightgreen;
+    background: #f7f8fa;
   }
 }
 aside {

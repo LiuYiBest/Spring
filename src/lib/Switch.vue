@@ -13,7 +13,7 @@ export default {
   },
   setup(props, context) {
     const toggle = () => {
-      context.emit('input', !props.value)
+      context.emit('update:value', !props.value)
     }
 
     return { toggle }
@@ -46,9 +46,21 @@ button:focus {
   outline: none;
 }
 button.checked {
-  background: blue;
+  background: #409eff;
 }
 button.checked > span {
   left: calc(24px);
 }
+button:active {
+  > span {
+    width: $h2 + 4px;
+  }
+}
+button.checked:active {
+  > span {
+    width: $h2 + 4px;
+    margin-left: -4px;
+  }
+}
+</style>
 </style>
