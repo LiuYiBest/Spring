@@ -1,16 +1,14 @@
 <template>
   <button
-    class="spring-switch"
+    class="gulu-switch"
     @click="toggle"
-    :class="{ 'spring-checked': value }"
+    :class="{ 'gulu-checked': value }"
   >
     <span></span>
   </button>
-  <div>{{ value }}</div>
 </template>
-
-
 <script lang="ts">
+import { ref } from 'vue'
 export default {
   props: {
     value: Boolean,
@@ -19,7 +17,6 @@ export default {
     const toggle = () => {
       context.emit('update:value', !props.value)
     }
-
     return { toggle }
   },
 }
@@ -28,14 +25,14 @@ export default {
 <style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
-.spring-switch {
+.gulu-switch {
   height: $h;
   width: $h * 2;
   border: none;
-  background: grey;
+  background: #bfbfbf;
   border-radius: $h/2;
   position: relative;
-  span {
+  > span {
     position: absolute;
     top: 2px;
     left: 2px;
@@ -43,24 +40,23 @@ $h2: $h - 4px;
     width: $h2;
     background: white;
     border-radius: $h2 / 2;
-    transition: left 250ms;
+    transition: all 250ms;
+  }
+  &.gulu-checked {
+    background: #1890ff;
+    > span {
+      left: calc(100% - #{$h2} - 2px);
+    }
   }
   &:focus {
     outline: none;
   }
-  &.spring-checked {
-    background: #409eff;
-    > span {
-      left: calc(24px);
-    }
-  }
-
   &:active {
     > span {
       width: $h2 + 4px;
     }
   }
-  &.spring-checked:active {
+  &.gulu-checked:active {
     > span {
       width: $h2 + 4px;
       margin-left: -4px;

@@ -1,4 +1,4 @@
-import "./lib/spring.scss"
+import "./lib/gulu.scss"
 import "./index.scss"
 
 import { createApp, h } from 'vue'
