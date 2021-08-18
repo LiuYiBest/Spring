@@ -1,9 +1,24 @@
 <template>
-  <button><span></span></button>
+  <button @click="toggle" :class="{ checked: value }">
+    <span></span>
+  </button>
+  <div>{{ value }}</div>
 </template>
 
-<script>
-export default {}
+
+<script lang="ts">
+export default {
+  props: {
+    value: Boolean,
+  },
+  setup(props, context) {
+    const toggle = () => {
+      context.emit('input', !props.value)
+    }
+
+    return { toggle }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -13,7 +28,7 @@ button {
   height: $h;
   width: $h * 2;
   border: none;
-  background: blue;
+  background: grey;
   border-radius: $h/2;
   position: relative;
 }
@@ -25,9 +40,15 @@ span {
   width: $h2;
   background: white;
   border-radius: $h2 / 2;
+  transition: left 250ms;
 }
-button:hover > span {
-  //   background: red;
-  left: calc(22px);
+button:focus {
+  outline: none;
+}
+button.checked {
+  background: blue;
+}
+button.checked > span {
+  left: calc(24px);
 }
 </style>
