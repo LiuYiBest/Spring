@@ -1,6 +1,6 @@
 <template>
   <div class="topnav">
-    <div class="logo" @click="toggleMenu">logo</div>
+    <div class="logo">logo</div>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
@@ -25,12 +25,16 @@ export default {
 }
 </script>
 
+</script>
 <style lang="scss" scoped>
 .topnav {
   background: pink;
   display: flex;
   padding: 16px;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 10;
   justify-content: center;
   align-items: center;
@@ -47,9 +51,8 @@ export default {
     }
   }
   > .toggleAside {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     background: red;
     position: absolute;
     left: 16px;
