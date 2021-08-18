@@ -1,5 +1,0 @@
-<template>
-    <div>
-        我的第一个Frank组件
-    </div>
-</template>

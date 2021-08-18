@@ -1,13 +1,6 @@
 <template>
+  <Topnav />
   <div>
-    <div class="topnav">
-      <div class="logo">log</div>
-      <ul class="menu">
-        <li>菜单1</li>
-        <li>菜单2</li>
-      </ul>
-    </div>
-
     <div class="banner">
       <h1>春风UI</h1>
       <h2>四季组件库，一个很有趣的UI组件库</h2>
@@ -18,6 +11,15 @@
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import Topnav from "../components/Topnav.vue";
+export default {
+  components: {
+    Topnav,
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 .topnav {
