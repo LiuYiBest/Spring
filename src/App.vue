@@ -8,8 +8,9 @@ import { ref, provide } from 'vue'
 export default {
   name: 'App',
   setup() {
+    const width = document.documentElement.clientWidth
+    const menuVisible = ref(width <= 500 ? false : true)
     // 使用provide设置menuVisible的值
-    const menuVisible = ref(false)
     provide('menuVisible', menuVisible) // set
   },
 }
