@@ -39,7 +39,9 @@ $blue:rgb(47,170,168);
 .top{
   background: rgb(186,218,209);
   background: linear-gradient(9deg, rgba(186,218,209,1) 0%, rgba(58,155,217,1) 100%);
-
+  border-bottom-left-radius: 10% 10%;
+  border-bottom-right-radius: 10% 10%;
+  // clip-path: ellipse(50% 50% at 50% 50%);
 }
 .features{
   >svg{
