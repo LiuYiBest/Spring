@@ -1,8 +1,8 @@
 <template>
   <div class="topnav">
     <router-link to="/" class="logo">
-      <svg class="icon" >
-       <use xlink:href="#icon-sun"></use>
+      <svg class="icon">
+        <use xlink:href="#icon-sun"></use>
       </svg>
     </router-link>
     <ul class="menu">
@@ -18,12 +18,12 @@
 import { inject, Ref } from 'vue'
 
 export default {
-props:{
-  toggleVisible:{
-    type:Boolean,
-    default:false
-  }
-},
+  props: {
+    toggleVisible: {
+      type: Boolean,
+      default: false,
+    },
+  },
 
   setup() {
     //inject添加APP.vue的provide变量
@@ -40,8 +40,7 @@ props:{
 
 
 <style lang="scss" >
-
-$blue:#0b3f1e;
+$blue: #0b3f1e;
 .topnav {
   color: $blue;
   display: flex;
@@ -58,7 +57,7 @@ $blue:#0b3f1e;
   > .logo {
     max-width: 6em;
     margin-right: auto;
-    > svg{
+    > svg {
       width: 40px;
       height: 40px;
     }
@@ -70,7 +69,7 @@ $blue:#0b3f1e;
     a {
       margin: 0 8px;
       display: inline-block;
-      padding:  14px;
+      padding: 14px;
     }
     > li {
       margin: 0 1em;

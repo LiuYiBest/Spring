@@ -61,11 +61,17 @@ export default {
   height: 100vh;
   > .nav {
     flex-shrink: 0;
+    background: rgb(161, 255, 246);
+    background: linear-gradient(
+      273deg,
+      rgba(161, 255, 246, 0.5279062308517157) 7%,
+      rgba(221, 251, 255, 0.4298670151654411) 93%
+    );
   }
   > .content {
     flex-grow: 1;
-    padding-top: 100px;
-    padding-left: 156px;
+    padding-top: 90px;
+    padding-left: 160px;
     @media (max-width: 500px) {
       padding-left: 0;
     }
@@ -78,15 +84,27 @@ export default {
   }
   > main {
     flex-grow: 1;
-    padding: 16px;
+    padding: 30px;
 
-    background: #f7f8fa;
+    // background: rgb(95, 223, 237);
+    // background: rgb(221, 251, 255);
+    // background: linear-gradient(
+    //   273deg,
+    //   rgba(221, 251, 255, 0.4298670151654411) 31%,
+    //   rgba(228, 248, 255, 0.5531163148853291) 95%
+    // );
   }
 }
 aside {
-  background: lightblue;
-  width: 150px;
-  padding: 16px;
+  background: rgb(55, 177, 191);
+  background: linear-gradient(
+    273deg,
+    rgba(55, 177, 191, 0.5587185557816876) 8%,
+    rgba(79, 235, 175, 0.3878502084427521) 85%
+  );
+
+  width: 160px;
+  padding: 28px 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -94,10 +112,17 @@ aside {
   height: 100%;
   > h2 {
     margin-bottom: 4px;
+    padding: 0 16px;
   }
   > ol {
     > li {
-      padding: 4px 0;
+      > a {
+        display: block;
+        padding: 4px 28px;
+      }
+      .router-link-active {
+        background: #e8fefe;
+      }
     }
   }
 }
