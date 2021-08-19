@@ -2,6 +2,13 @@
   <div>实例</div>
   <Button @click="toggle">toggle</Button>
   <Dialog v-model:visible="x" :onClickOverlay="false" :ok="f1" :cancel="f2">
+    <template v-slot:content>
+      <strong>111</strong>
+      <div>2222</div>
+    </template>
+    <template v-slot:title>
+      <div>111标题</div>
+    </template>
   </Dialog>
 </template>
 
