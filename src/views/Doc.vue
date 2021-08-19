@@ -1,8 +1,21 @@
 <template>
   <div class="layout">
-    <Topnav class="nav" />
+    <Topnav class="nav" :toggleVisible="true" />
     <div class="content">
       <aside v-if="menuVisible">
+        <h2>文档</h2>
+        <ol>
+          <li>
+            <router-link to="/doc/intro">介绍</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/get-started">安装</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/install">开始使用</router-link>
+          </li>
+        </ol>
+
         <h2>组件列表</h2>
         <!-- 使用嵌套路由 -->
         <ol>
@@ -66,7 +79,6 @@ export default {
   > main {
     flex-grow: 1;
     padding: 16px;
-   
 
     background: #f7f8fa;
   }
