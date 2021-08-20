@@ -60,18 +60,20 @@ export default {
   flex-direction: column;
   height: 100vh;
   > .nav {
+    background-image: url('https://typoraimagedemo.oss-cn-shenzhen.aliyuncs.com/Qianduan/WDnav.png');
+
     flex-shrink: 0;
-    background: rgb(161, 255, 246);
-    background: linear-gradient(
-      273deg,
-      rgba(161, 255, 246, 0.5279062308517157) 7%,
-      rgba(221, 251, 255, 0.4298670151654411) 93%
-    );
+    // background: rgb(161, 255, 246);
+    // background: linear-gradient(
+    //   273deg,
+    //   rgba(161, 255, 246, 0.5279062308517157) 7%,
+    //   rgba(221, 251, 255, 0.4298670151654411) 93%
+    // );
   }
   > .content {
     flex-grow: 1;
     padding-top: 90px;
-    padding-left: 160px;
+    padding-left: 200px;
     @media (max-width: 500px) {
       padding-left: 0;
     }
@@ -96,14 +98,16 @@ export default {
   }
 }
 aside {
-  background: rgb(55, 177, 191);
-  background: linear-gradient(
-    273deg,
-    rgba(55, 177, 191, 0.5587185557816876) 8%,
-    rgba(79, 235, 175, 0.3878502084427521) 85%
-  );
+  background-image: url('https://typoraimagedemo.oss-cn-shenzhen.aliyuncs.com/Qianduan/YSWD.png');
 
-  width: 160px;
+  // background: rgb(55, 177, 191);
+  // background: linear-gradient(
+  //   273deg,
+  //   rgba(55, 177, 191, 0.5587185557816876) 8%,
+  //   rgba(79, 235, 175, 0.3878502084427521) 85%
+  // );
+
+  width: 200px;
   padding: 28px 0;
   position: fixed;
   top: 0;
@@ -121,7 +125,7 @@ aside {
         padding: 4px 28px;
       }
       .router-link-active {
-        background: #e8fefe;
+        background: #fff;
       }
     }
   }

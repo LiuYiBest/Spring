@@ -2,7 +2,7 @@
   <div class="topnav">
     <router-link to="/" class="logo">
       <svg class="icon">
-        <use xlink:href="#icon-sun"></use>
+        <use xlink:href="#icon-wind"></use>
       </svg>
     </router-link>
     <ul class="menu">
@@ -63,6 +63,7 @@ $blue: #0b3f1e;
     }
   }
   > .menu {
+    color: white;
     display: flex;
     white-space: nowrap;
     flex-wrap: nowrap;
