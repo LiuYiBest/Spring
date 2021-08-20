@@ -1,71 +1,24 @@
 <template>
   <div>
     <h1>Switch 组件示例</h1>
-    <div class="demo">
-      <h2>常规用法</h2>
-      <div class="demo-component">
-        <component :is="Switch1Demo" />
-      </div>
-      <div class="demo-actions">
-        <Button>查看代码</Button>
-      </div>
-      <div class="demo-code">
-        <pre
-          class="language-html"
-          v-html="
-            Prism.highlight(
-              Switch1Demo.__sourceCode,
-              Prism.languages.html,
-              'html'
-            )
-          "
-        />
-      </div>
-    </div>
-    <div class="demo">
-      <h2>支持 disabled</h2>
-      <div class="demo-component">
-        <component :is="Switch2Demo" class="dis" />
-      </div>
-      <div class="demo-actions">
-        <Button>查看代码</Button>
-      </div>
-      <div class="demo-code">
-        <pre
-          class="language-html"
-          v-html="
-            Prism.highlight(
-              Switch2Demo.__sourceCode,
-              Prism.languages.html,
-              'html'
-            )
-          "
-        />
-      </div>
-    </div>
+    <Demo :component="Switch1Demo" />
+    <Demo :component="Switch2Demo" />
   </div>
 </template>
   
   <script lang="ts">
-import Button from '../lib/Button.vue'
 import Switch1Demo from './Switch1.demo.vue'
 import Switch2Demo from './Switch2.demo.vue'
-import 'prismjs'
-import 'prismjs/themes/prism.css'
-const Prism = (window as any).Prism
-
+import Demo from './Demo.vue'
 import { ref } from 'vue'
 export default {
   components: {
-    Button,
+    Demo,
   },
   setup() {
-    const bool = ref(false)
     return {
-      bool,
       Switch1Demo,
       Switch2Demo,
-      Prism,
     }
   },
 }
@@ -73,12 +26,9 @@ export default {
   
   <style lang="scss" scoped>
 $border-color: #d9d9d9;
-
 .demo {
-  cursor: pointer;
   border: 1px solid $border-color;
   margin: 16px 0 32px;
-
   > h2 {
     font-size: 20px;
     padding: 8px 16px;
@@ -99,9 +49,6 @@ $border-color: #d9d9d9;
       font-family: Consolas, 'Courier New', Courier, monospace;
       margin: 0;
     }
-  }
-  .dis {
-    cursor: not-allowed;
   }
 }
 </style>

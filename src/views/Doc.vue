@@ -98,14 +98,8 @@ export default {
   }
 }
 aside {
+  $aside-index: 10;
   background-image: url('https://typoraimagedemo.oss-cn-shenzhen.aliyuncs.com/Qianduan/YSWD.png');
-
-  // background: rgb(55, 177, 191);
-  // background: linear-gradient(
-  //   273deg,
-  //   rgba(55, 177, 191, 0.5587185557816876) 8%,
-  //   rgba(79, 235, 175, 0.3878502084427521) 85%
-  // );
 
   width: 200px;
   padding: 28px 0;
@@ -114,6 +108,7 @@ aside {
   left: 0;
   padding-top: 100px;
   height: 100%;
+  z-index: $aside-index;
   > h2 {
     margin-bottom: 4px;
     padding: 0 16px;
