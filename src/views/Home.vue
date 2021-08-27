@@ -48,15 +48,10 @@ export default {
 
 <style lang="scss" scoped>
 $blue: #414b5b;
-.topnavAndBanner {
-  background-image: url('https://typoraimagedemo.oss-cn-shenzhen.aliyuncs.com/Qianduan/YSWemDi.png');
 
-  // background: rgb(186, 218, 209);
-  // background: linear-gradient(
-  //   9deg,
-  //   rgba(186, 218, 209, 1) 0%,
-  //   rgba(58, 155, 217, 1) 100%
-  // );
+.topnavAndBanner {
+  background-image: url('https://typoraimagedemo.oss-cn-shenzhen.aliyuncs.com/Qianduan/image-20210820100051276.png');
+
   border-bottom-left-radius: 10% 70px;
   border-bottom-right-radius: 10% 70px;
   // clip-path: ellipse(50% 50% at 50% 50%);
@@ -65,6 +60,7 @@ $blue: #414b5b;
 .features {
   margin: 64px auto;
   width: 400px;
+  // z-index: 2;
   @media (min-width: 800px) {
     width: 800px;
   }

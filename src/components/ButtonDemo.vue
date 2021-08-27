@@ -1,10 +1,16 @@
 <template>
   <div>
-    <div>Button 示例</div>
+    <h1>Button 按钮组件</h1>
+    <hr />
+    <p>Button 组件可以响应用户的点击操作。</p>
     <Demo :component="Button1Demo" />
+    <hr />
     <Demo :component="Button2Demo" />
+    <hr />
     <Demo :component="Button3Demo" />
+    <hr />
     <Demo :component="Button4Demo" />
+    <hr />
     <Demo :component="Button5Demo" />
   </div>
 </template>

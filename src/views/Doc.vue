@@ -9,13 +9,12 @@
             <router-link to="/doc/intro">介绍</router-link>
           </li>
           <li>
-            <router-link to="/doc/get-started">安装</router-link>
+            <router-link to="/doc/install">安装</router-link>
           </li>
           <li>
-            <router-link to="/doc/install">开始使用</router-link>
+            <router-link to="/doc/get-started">开始使用</router-link>
           </li>
         </ol>
-
         <h2>组件列表</h2>
         <!-- 使用嵌套路由 -->
         <ol>

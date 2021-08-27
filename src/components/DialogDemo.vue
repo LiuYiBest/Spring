@@ -1,7 +1,10 @@
   
 <template>
-  <div>Dialog 示例</div>
+  <h1>Dialog 对话窗组件</h1>
+  <hr />
+  <p>根据用户操作展示对应的提示弹窗</p>
   <Demo :component="Dialog1Demo" />
+  <hr />
   <Demo :component="Dialog2Demo" />
 </template>
   

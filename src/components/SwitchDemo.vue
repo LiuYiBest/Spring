@@ -1,7 +1,10 @@
 <template>
   <div>
-    <h1>Switch 组件示例</h1>
+    <h1>Switch 开关组件</h1>
+    <hr />
+    <p>Switch 开关组件. 开关控制能切换单个设置的开/关两个状态。</p>
     <Demo :component="Switch1Demo" />
+    <hr />
     <Demo :component="Switch2Demo" />
   </div>
 </template>
