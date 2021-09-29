@@ -3,7 +3,7 @@
     <Topnav />
     <div class="banner">
       <h1>春风UI</h1>
-      <h2>四季组件库，一个很有趣的UI组件库</h2>
+      <h2>SpringUI组件库，一款清新风格的UI组件库</h2>
       <p class="actions">
         <a href="https://github.com/LiuYiBest">Github</a>
         <router-link to="/doc">快速开始</router-link>
