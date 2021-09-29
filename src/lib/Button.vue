@@ -5,20 +5,20 @@
   </button>
 </template>
 <script lang="ts">
-import { computed } from 'vue'
+import { computed } from "vue";
 export default {
   props: {
     theme: {
       type: String,
-      default: 'button',
+      default: "button",
     },
     size: {
       type: String,
-      default: 'normal',
+      default: "normal",
     },
     level: {
       type: String,
-      default: 'normal',
+      default: "normal",
     },
     disabled: {
       type: Boolean,
@@ -26,21 +26,21 @@ export default {
     },
     loading: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   setup(props) {
-    const { theme, size, level } = props
+    const { theme, size, level } = props;
     const classes = computed(() => {
       return {
         [`gulu-theme-${theme}`]: theme,
         [`gulu-size-${size}`]: size,
         [`gulu-level-${level}`]: level,
-      }
-    })
-    return { classes }
+      };
+    });
+    return { classes };
   },
-}
+};
 </script>
 <style lang="scss">
 $h: 32px;
@@ -51,7 +51,6 @@ $radius: 4px;
 $red: red;
 $grey: grey;
 .gulu-button {
-  margin: 8px;
   box-sizing: border-box;
   height: $h;
   padding: 0 12px;
@@ -65,7 +64,7 @@ $grey: grey;
   border: 1px solid $border-color;
   border-radius: $radius;
   box-shadow: 0 1px 0 fade-out(black, 0.95);
-  transition: 250ms;
+  transition: background 250ms;
   & + & {
     margin-left: 8px;
   }
@@ -110,7 +109,6 @@ $grey: grey;
   }
   &.gulu-theme-button {
     &.gulu-level-main {
-      margin: 8px;
       background: $blue;
       color: white;
       border-color: $blue;
@@ -121,7 +119,6 @@ $grey: grey;
       }
     }
     &.gulu-level-danger {
-      cursor: not-allowed;
       background: $red;
       border-color: $red;
       color: white;
@@ -134,7 +131,6 @@ $grey: grey;
   }
   &.gulu-theme-link {
     &.gulu-level-danger {
-      cursor: not-allowed;
       color: $red;
       &:hover,
       &:focus {
@@ -151,7 +147,6 @@ $grey: grey;
       }
     }
     &.gulu-level-danger {
-      cursor: not-allowed;
       color: $red;
       &:hover,
       &:focus {
@@ -168,14 +163,13 @@ $grey: grey;
       }
     }
   }
-  &.gulu-theme-link,
-  &.gulu-theme-text {
+  &.gulu-theme-link, &.gulu-theme-text {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
     }
   }
-  > .gulu-loadingIndicator {
+  > .gulu-loadingIndicator{
     width: 14px;
     height: 14px;
     display: inline-block;
@@ -188,11 +182,8 @@ $grey: grey;
   }
 }
 @keyframes gulu-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0%{transform: rotate(0deg)}
+  100%{transform: rotate(360deg)}
 }
 </style>
+© 2021 GitHub, Inc.

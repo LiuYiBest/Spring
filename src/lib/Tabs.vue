@@ -27,7 +27,7 @@
     </div>
   </div>
 </template>
-  
+
   <script lang="ts">
 import Tab from './Tab.vue'
 import { computed, ref, onMounted, onUpdated } from 'vue'
@@ -84,7 +84,7 @@ export default {
   },
 }
 </script>
-  
+
   <style lang="scss">
 $blue: #40a9ff;
 $color: #333;

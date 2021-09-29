@@ -2,4 +2,10 @@
   <div>
     <slot />
   </div>
-  </template>
+</template>
+
+<script lang="ts">
+export default {
+  name: 'SpringTab'
+}
+</script>
