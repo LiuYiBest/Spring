@@ -50,7 +50,7 @@ export default {
 $blue: #414b5b;
 
 .topnavAndBanner {
-  background-image: url('https://typoraimagedemo.oss-cn-shenzhen.aliyuncs.com/Qianduan/image-20210820100051276.png');
+  background-image: url('https://typoraimagedemo.oss-cn-shenzhen.aliyuncs.com/Qianduan/image-20210929213815511.jpg');
 
   border-bottom-left-radius: 10% 70px;
   border-bottom-right-radius: 10% 70px;
