@@ -1,6 +1,6 @@
 # 安装
 
-打开终端运行下列命令：
+确保安装Node.js，打开终端执行下列命令：
 
 ```
 npm install spring-ui
