@@ -1,12 +1,13 @@
 <demo>
-  支持 disabled
-  </demo>
+  基本用法
+ </demo>
+    
   <template>
-  <Switch v-model:value="bool" disabled />
+  <Switch v-model:value="bool" />
 </template>
-  
-  <script lang="ts">
-import Switch from '../lib/Switch.vue'
+    
+    <script lang="ts">
+import Switch from '../../lib/Switch.vue'
 import { ref } from 'vue'
 export default {
   components: {
