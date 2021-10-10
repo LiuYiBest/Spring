@@ -1,5 +1,5 @@
 <template>
-  <div class="topnav">
+  <div class="topNav">
     <router-link to="/" class="logo">
       <svg class="icon">
         <use xlink:href="#icon-wind"></use>
@@ -41,7 +41,7 @@ export default {
 
 <style lang="scss" >
 $blue: #0b3f1e;
-.topnav {
+.topNav {
   color: $blue;
   display: flex;
   padding: 16px 50px;
@@ -52,8 +52,7 @@ $blue: #0b3f1e;
   z-index: 20;
   justify-content: center;
   align-items: center;
-  // border-bottom: 1px solid #666;
-  box-shadow: 0 5px 5px rgb(111 111 111 / 30%);
+  box-shadow: 0 5px 5px rgb(122 166 166 / 30%);
   > .logo {
     max-width: 6em;
     margin-right: auto;

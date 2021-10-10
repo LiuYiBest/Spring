@@ -1,9 +1,9 @@
 <template>
-  <div class="topnavAndBanner">
-    <Topnav />
+  <div class="topNavAndBanner">
+    <TopNav />
     <div class="banner">
       <h1>春风UI</h1>
-      <h2>SpringUI组件库，一款清新风格的UI组件库</h2>
+      <h2>SpringUI组件库，一款有趣风格的UI组件库</h2>
       <p class="actions">
         <a href="https://github.com/LiuYiBest">Github</a>
         <router-link to="/doc">快速开始</router-link>
@@ -38,10 +38,10 @@
 </template>
 
 <script lang="ts">
-import Topnav from '../components/Topnav.vue'
+import TopNav from '../components/Topnav.vue'
 export default {
   components: {
-    Topnav,
+    TopNav,
   },
 }
 </script>
@@ -49,9 +49,8 @@ export default {
 <style lang="scss" scoped>
 $blue: #414b5b;
 
-.topnavAndBanner {
+.topNavAndBanner {
   background-image: url('https://typoraimagedemo.oss-cn-shenzhen.aliyuncs.com/Qianduan/image-20210929213815511.jpg');
-
   border-bottom-left-radius: 10% 70px;
   border-bottom-right-radius: 10% 70px;
   // clip-path: ellipse(50% 50% at 50% 50%);
@@ -60,7 +59,7 @@ $blue: #414b5b;
 .features {
   margin: 64px auto;
   width: 400px;
-  // z-index: 2;
+   z-index: 2;
   @media (min-width: 800px) {
     width: 800px;
   }
@@ -97,13 +96,11 @@ $blue: #414b5b;
   }
 }
 .banner {
-  // padding: 100px 0;
   height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: #0b3f1e;
   > h1 {
     color: #000;
   }
@@ -118,7 +115,7 @@ $blue: #414b5b;
       border-radius: 4px;
       &:hover {
         background-color: #397427;
-        transition-duration: 500ms;
+        transition-duration: 250ms;
       }
     }
   }

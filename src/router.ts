@@ -11,8 +11,11 @@ import TabsDemo from './components/TabsDemo.vue'
 import DocDemo from './components/DocDemo.vue'
 import Markdown from './components/Markdown.vue'
 import { h } from 'vue'
+// @ts-ignore
 import intro from './markdown/intro.md'
+// @ts-ignore
 import getStarted from './markdown/get-started.md'
+// @ts-ignore
 import install from './markdown/install.md'
 
 const md = string => h(Markdown, { content: string, key: string })

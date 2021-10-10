@@ -1,7 +1,7 @@
 import "./lib/gulu.scss"
 import "./index.scss"
 
-import { createApp, h } from 'vue'
+import { createApp} from 'vue'
 import App from './App.vue'
 import './index.scss'
 import 'github-markdown-css'
