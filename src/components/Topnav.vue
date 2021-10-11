@@ -26,9 +26,8 @@ export default {
   },
 
   setup() {
-    //inject添加APP.vue的provide变量
-    const menuVisible = inject<Ref<boolean>>('menuVisible') // get
-
+    //inject添加APP.vue的provide变量      类型是Ref<boolean>
+    const menuVisible = inject<Ref<boolean>>('menuVisible')
     //切换列表显示
     const toggleMenu = () => {
       menuVisible.value = !menuVisible.value

@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <Topnav class="nav" :toggleVisible="true" />
+    <TopNav class="nav" :toggleVisible="true" />
     <div class="content">
       <aside v-if="menuVisible">
         <h2>文档</h2>
@@ -16,7 +16,6 @@
           </li>
         </ol>
         <h2>组件列表</h2>
-        <!-- 使用嵌套路由 -->
         <ol>
           <li>
             <router-link to="/doc/switch">Switch 组件</router-link>
@@ -40,13 +39,14 @@
 </template>
 
 <script lang="ts">
-import Topnav from '../components/Topnav.vue'
+import TopNav from '../components/Topnav.vue'
 import { inject, Ref } from 'vue'
 
 export default {
-  components: { Topnav },
+  components: { TopNav },
   setup() {
-    const menuVisible = inject<Ref<boolean>>('menuVisible') // get
+    //判断
+    const menuVisible = inject<Ref<boolean>>('menuVisible')
     //return之后才能用
     return { menuVisible }
   },
@@ -60,14 +60,8 @@ export default {
   height: 100vh;
   > .nav {
     background-image: url('https://typoraimagedemo.oss-cn-shenzhen.aliyuncs.com/Qianduan/WDnav.png');
-
     flex-shrink: 0;
-    // background: rgb(161, 255, 246);
-    // background: linear-gradient(
-    //   273deg,
-    //   rgba(161, 255, 246, 0.5279062308517157) 7%,
-    //   rgba(221, 251, 255, 0.4298670151654411) 93%
-    // );
+
   }
   > .content {
     flex-grow: 1;
@@ -87,19 +81,12 @@ export default {
     flex-grow: 1;
     padding: 30px;
 
-    // background: rgb(95, 223, 237);
-    // background: rgb(221, 251, 255);
-    // background: linear-gradient(
-    //   273deg,
-    //   rgba(221, 251, 255, 0.4298670151654411) 31%,
-    //   rgba(228, 248, 255, 0.5531163148853291) 95%
-    // );
   }
 }
+//侧边栏列表
 aside {
   $aside-index: 10;
   background-image: url('https://typoraimagedemo.oss-cn-shenzhen.aliyuncs.com/Qianduan/YSWD.png');
-
   width: 200px;
   padding: 28px 0;
   position: fixed;
