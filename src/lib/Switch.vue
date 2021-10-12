@@ -1,7 +1,9 @@
 <template>
-  <button class="spring-switch" @click="toggle" :class="{'spring-checked':value}">
+  <button :disabled="disabled"  class="spring-switch"
+          @click="toggle" :class="{'spring-checked':value}">
     <span></span>
   </button>
+
 </template>
 <script lang="ts">
 export default {
@@ -16,16 +18,28 @@ export default {
   }
 };
 </script>
-
 <style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
 .spring-switch {
-  height: $h; width: $h * 2; border: none; background: #bfbfbf; border-radius: $h/2; position: relative;
+  height: $h; width: $h * 2;
+  border: none;
+  background: #bfbfbf;
+  border-radius: $h/2;
+  position: relative;
   > span {
-    position: absolute; top: 2px; left: 2px; height: $h2; width: $h2; background: white; border-radius: $h2 / 2; transition: all 250ms;
+    position: absolute;
+    top: 2px; left: 2px;
+    height: $h2; width: $h2;
+    background: white;
+    border-radius: $h2 / 2;
+    transition: all 250ms;
   }
-  &.spring-checked { background: #1890ff;
+  &[disabled] {
+    cursor: not-allowed;
+  }
+  &.spring-checked {
+    background: #1890ff;
     > span { left: calc(100% - #{$h2} - 2px); }
   }
   &:focus { outline: none; }
@@ -33,7 +47,10 @@ $h2: $h - 4px;
     > span { width: $h2 + 4px; }
   }
   &.spring-checked:active {
-    > span { width: $h2 + 4px; margin-left: -4px; }
+    > span {
+      width: $h2 + 4px;
+      margin-left: -4px;
+    }
   }
 }
 </style>

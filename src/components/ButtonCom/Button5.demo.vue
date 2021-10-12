@@ -1,6 +1,6 @@
   
 <demo>
-    支持显示加载中
+    显示正在加载中
     </demo>
     <template>
   <div>

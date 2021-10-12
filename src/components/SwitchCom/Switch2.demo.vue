@@ -1,8 +1,8 @@
 <demo>
-  支持 disabled
+  不可用状态：Switch禁用中
   </demo>
   <template>
-  <Switch v-model:value="bool" disabled />
+  <Switch   v-model:value="bool" disabled />
 </template>
   
   <script lang="ts">

@@ -1,9 +1,8 @@
-import "./lib/gulu.scss"
+import "./lib/spring.scss"
 import "./index.scss"
 
 import { createApp} from 'vue'
 import App from './App.vue'
-import './index.scss'
 import 'github-markdown-css'
 import { router } from './router'
 import './assets/svg.js'
