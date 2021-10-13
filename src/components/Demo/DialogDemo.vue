@@ -10,8 +10,8 @@
   
   <script lang="ts">
 import Demo from './Demo.vue'
-import Dialog1Demo from './DialogCom/Dialog1.demo.vue'
-import Dialog2Demo from './DialogCom/Dialog2.demo.vue'
+import Dialog1Demo from '../DialogCom/Dialog1.demo.vue'
+import Dialog2Demo from '../DialogCom/Dialog2.demo.vue'
 export default {
   components: {
     Demo,

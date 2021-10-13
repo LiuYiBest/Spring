@@ -15,7 +15,7 @@
 </template>
     
     <script lang="ts">
-import Button from '../lib/Button.vue'
+import Button from '../../lib/Button.vue'
 import 'prismjs'
 import 'prismjs/themes/prism-coy.css'
 import { computed, ref } from 'vue'
@@ -37,7 +37,7 @@ export default {
     })
     const ShowCode = () => (codeVisible.value = true)
     const HideCode = () => (codeVisible.value = false)
-    const codeVisible = ref(false)
+    const codeVisible = ref(true)
     return {
       Prism,
       html,

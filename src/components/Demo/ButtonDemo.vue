@@ -17,11 +17,11 @@
   
   <script lang="ts">
 import Demo from './Demo.vue'
-import Button1Demo from './ButtonCom/Button1.demo.vue'
-import Button2Demo from './ButtonCom/Button2.demo.vue'
-import Button3Demo from './ButtonCom/Button3.demo.vue'
-import Button4Demo from './ButtonCom/Button4.demo.vue'
-import Button5Demo from './ButtonCom/Button5.demo.vue'
+import Button1Demo from '../ButtonCom/Button1.demo.vue'
+import Button2Demo from '../ButtonCom/Button2.demo.vue'
+import Button3Demo from '../ButtonCom/Button3.demo.vue'
+import Button4Demo from '../ButtonCom/Button4.demo.vue'
+import Button5Demo from '../ButtonCom/Button5.demo.vue'
 export default {
   components: {
     Demo,

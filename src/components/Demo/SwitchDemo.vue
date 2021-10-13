@@ -6,13 +6,12 @@
     <Demo :component="Switch1Demo" />
     <hr />
     <Demo :component="Switch2Demo" />
-
   </div>
 </template>
   
   <script lang="ts">
-import Switch1Demo from './SwitchCom/Switch1.demo.vue'
-import Switch2Demo from './SwitchCom/Switch2.demo.vue'
+import Switch1Demo from '../SwitchCom/Switch1.demo.vue'
+import Switch2Demo from '../SwitchCom/Switch2.demo.vue'
 import Demo from './Demo.vue'
 export default {
   components: {

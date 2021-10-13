@@ -2,7 +2,7 @@
   基本用法
  </demo>
     
-  <template>
+<template>
   <Switch v-model:value="bool" />
 </template>
     
