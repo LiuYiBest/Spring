@@ -2,7 +2,7 @@
   <template v-if="visible">
     <Teleport to="body">
       <!--遮罩层-->
-      <div class="spring-dialog-overlay" @click="onClickOverlay"></div>
+      <div class="spring-dialog-overlay"  @click="onClickOverlay"></div>
         <!--对话框-->
       <div class="spring-dialog-wrapper">
         <div class="spring-dialog">
@@ -42,6 +42,7 @@ export default {
     cancel: {
       type: Function,
     },
+
   },
   components: {
     Button,

@@ -6,7 +6,9 @@
       <h2>春风UI组件库，一款有趣风格的UI组件库</h2>
       <p class="actions">
         <a href="https://github.com/LiuYiBest">Github</a>
-        <router-link to="/doc">快速开始</router-link>
+        <router-link to="/doc">
+          开始使用
+        </router-link>
       </p>
     </div>
   </div>
@@ -49,10 +51,10 @@ export default {
 <style lang="scss" scoped>
 $blue: #414b5b;
 h1{
-  font-size: 48px;
+  font-size: 40px;
 }
 .topNavAndBanner {
-  background-image: url('https://typoraimagedemo.oss-cn-shenzhen.aliyuncs.com/Qianduan/image-20210929213815511.jpg');
+  background-image: url('https://typoraimagedemo.oss-cn-shenzhen.aliyuncs.com/Qianduan/image-20211013192739220.jpg');
   //opacity: 1;
   border-bottom-left-radius: 10% 70px;
   border-bottom-right-radius: 10% 70px;
@@ -98,7 +100,7 @@ h1{
   }
 }
 .banner {
-  height: 400px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;

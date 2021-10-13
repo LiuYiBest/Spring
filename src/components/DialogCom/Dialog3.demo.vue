@@ -1,21 +1,19 @@
 <demo>
-  常规使用
+  禁止遮罩层关闭
     </demo>
     <template>
   <div>
     <Button @click="toggle">打开对话框</Button>
     <Dialog
       v-model:visible="visible"
-      :onClickOverlay="true"
-      :ok="f1"
-      :cancel="f2"
+      :onClickOverlay="false"
     >
       <template v-slot:title>
         <strong>Title</strong>
       </template>
       <template v-slot:content>
-        <strong>提示信息</strong>
-        <div>警告</div>
+        <strong>禁止遮罩层点击关闭</strong>
+        <p>设置onClickOverlay，点击遮罩层不会关闭对话框，必须点击ok和cancel或者关闭按钮。</p>
       </template>
     </Dialog>
   </div>
@@ -35,15 +33,10 @@ export default {
     const toggle = () => {
       visible.value = !visible.value
     }
-    const f1 = () => {
-      return false
-    }
-    const f2 = () => {}
+
     return {
       visible,
       toggle,
-      f1,
-      f2,
     }
   },
 }
