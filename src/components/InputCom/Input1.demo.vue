@@ -3,7 +3,11 @@
 </demo>
 
 <template>
-    <Input />
+  <Input  value="Please input"/>
+  <Input  value="Disabled input" disabled />
+  <Input  value="Readonly"  readonly />
+  <Input  value="Error input" error='输入有误，请重新输入'/>
+
 </template>
 
 <script lang='ts'>

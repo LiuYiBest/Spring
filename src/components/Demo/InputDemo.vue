@@ -6,10 +6,10 @@
     <p>根据不同的需求，一共有四种不同状态的输入框</p>
   <section>
     <ul>
-      <li>normal</li>
-      <li>disabled</li>
-      <li>readonly</li>
-      <li>error</li>
+      <li>默认输入：normal</li>
+      <li>禁止输入：disabled</li>
+      <li>只读选项：readonly</li>
+      <li>输入错误：error</li>
     </ul>
   </section>
   <Demo :component="Input1Demo" />

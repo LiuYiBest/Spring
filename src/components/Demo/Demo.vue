@@ -5,8 +5,8 @@
       <component :is="component" />
     </div>
     <div class="demo-actions">
-      <Button @click="HideCode" v-if="codeVisible">隐藏代码</Button>
-      <Button @click="ShowCode" v-else>查看代码</Button>
+      <Button  @click="HideCode" v-if="codeVisible">隐藏代码</Button>
+      <Button  @click="ShowCode" v-else>查看代码</Button>
     </div>
     <div class="demo-code" v-if="codeVisible">
       <pre class="language-html" v-html="html" />
@@ -65,6 +65,7 @@ $border-color: #d9d9d9;
   &-actions {
     padding: 8px 16px;
     border-top: 1px dashed $border-color;
+
   }
   &-code {
     padding: 8px 16px;
