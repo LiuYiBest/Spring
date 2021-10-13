@@ -39,7 +39,7 @@ $h2: $h - 4px;
     cursor: not-allowed;
   }
   &.spring-checked {
-    background: #1890ff;
+    background: #13ce66;
     > span { left: calc(100% - #{$h2} - 2px); }
   }
   &:focus { outline: none; }

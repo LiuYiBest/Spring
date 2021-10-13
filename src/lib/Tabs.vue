@@ -1,9 +1,11 @@
 <template>
   <div class="spring-tabs">
     <div class="spring-tabs-nav" ref="container">
-      <div class="spring-tabs-nav-item" v-for="(title,index) in titles"
+      <div class="spring-tabs-nav-item"
+           v-for="(title,index) in titles"
            :ref="el => { if (title===selected) selectedItem = el }"
-           @click="select(title)" :class="{selected: title=== selected}"
+           @click="select(title)"
+           :class="{selected: title=== selected}"
            :key="index">{{title}}</div>
       <div class="spring-tabs-nav-indicator" ref="indicator"></div>
     </div>

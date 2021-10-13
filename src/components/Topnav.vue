@@ -51,7 +51,7 @@ $blue: #0b3f1e;
   z-index: 20;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 5px 5px rgb(122 166 166 / 30%);
+  box-shadow: 0 5px 5px rgb(122 122 122 / 40%);
   > .logo {
     max-width: 6em;
     margin-right: auto;

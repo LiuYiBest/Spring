@@ -2,7 +2,7 @@ Arguments:
   C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js install
 
 PATH: 
-  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;E:\Git\Git\cmd;C:\Program Files\nodejs\;D:\Xftp\;D:\Xshell\;C:\Users\10706\AppData\Local\Yarn\bin;C:\Users\10706\AppData\Local\Yarn\Data\global\node_modules\.bin;C:\Program Files (x86)\Yarn\bin;C:\Users\10706\AppData\Local\Microsoft\WindowsApps;E:\VSCode\Microsoft VS Code\bin;D:\Bindzip\;C:\Users\10706\AppData\Roaming\npm;C:\Users\10706\AppData\Local\Yarn\bin;C:\Program Files\nodejs;
+  E:\Cmder\vendor\git-for-windows\mingw64\bin;E:\Cmder\vendor\git-for-windows\usr\bin;C:\Users\10706\bin;E:\Spring\node_modules\.bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;E:\Git\Git\cmd;C:\Program Files\nodejs;D:\Xftp;D:\Xshell;C:\Users\10706\AppData\Local\Yarn\bin;C:\Users\10706\AppData\Local\Yarn\Data\global\node_modules\.bin;C:\Program Files (x86)\Yarn\bin;C:\Users\10706\AppData\Local\Microsoft\WindowsApps;E:\VSCode\Microsoft VS Code\bin;D:\Bindzip;C:\Users\10706\AppData\Roaming\npm;C:\Users\10706\AppData\Local\Yarn\bin;C:\Program Files\nodejs
 
 Yarn version: 
   1.22.5
@@ -544,7 +544,7 @@ Lockfile:
       ansi-styles "^4.1.0"
       supports-color "^7.1.0"
   
-  "chokidar@>=3.0.0 <4.0.0", chokidar@^3.4.2:
+  "chokidar@>=2.0.0 <4.0.0", "chokidar@>=3.0.0 <4.0.0", chokidar@^3.4.2:
     version "3.5.2"
     resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.2.tgz#dba3976fcadb016f66fd365021d91600d01c1e75"
     integrity sha512-ekGhOnNVPgT77r4K/U3GDhu+FQ2S8TnK/s2KbIGXi0SZWuwkZ2QNyfWdZW+TVfn84DpEP7rLeCt2UI6bJ8GwbQ==
@@ -1396,7 +1396,7 @@ Lockfile:
     resolved "https://registry.nlark.com/node-forge/download/node-forge-0.10.0.tgz#32dea2afb3e9926f02ee5ce8794902691a676bf3"
     integrity sha1-Mt6ir7Ppkm8C7lzoeUkCaRpna/M=
   
-  node-sass@4, "node-sass@npm:sass@^1.26.11", sass@^1.26.11:
+  node-sass@4, "node-sass@npm:sass@^1.26.11":
     version "1.42.1"
     resolved "https://registry.npmmirror.com/sass/download/sass-1.42.1.tgz?cache=0&sync_timestamp=1632753463109&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fsass%2Fdownload%2Fsass-1.42.1.tgz#5ab17bebc1cb1881ad2e0c9a932c66ad64e441e2"
     integrity sha1-WrF768HLGIGtLgyakyxmrWTkQeI=
@@ -1737,6 +1737,13 @@ Lockfile:
     version "5.2.1"
     resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.2.1.tgz#1eaf9fa9bdb1fdd4ec75f58f9cdb4e6b7827eec6"
     integrity sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==
+  
+  sass@1.26.10:
+    version "1.26.10"
+    resolved "https://registry.npmmirror.com/sass/download/sass-1.26.10.tgz?cache=0&sync_timestamp=1632753463109&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fsass%2Fdownload%2Fsass-1.26.10.tgz#851d126021cdc93decbf201d1eca2a20ee434760"
+    integrity sha1-hR0SYCHNyT3svyAdHsoqIO5DR2A=
+    dependencies:
+      chokidar ">=2.0.0 <4.0.0"
   
   selfsigned@^1.10.8:
     version "1.10.11"
