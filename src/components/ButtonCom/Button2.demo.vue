@@ -1,22 +1,22 @@
 <demo>
-    支持 size
+    支持不同的Size
     </demo>
     <template>
   <div>
     <div>
-      <Button size="big">Big</Button>
-      <Button>Normal</Button>
-      <Button size="small">Small</Button>
+      <Button size="big">大大大</Button>
+      <Button>普普通</Button>
+      <Button size="small">小小小</Button>
     </div>
     <div>
-      <Button theme="link" size="big">Big</Button>
-      <Button theme="link">Normal</Button>
-      <Button size="small" theme="link">Small</Button>
+      <Button theme="link" size="big">大大大</Button>
+      <Button theme="link">普普通</Button>
+      <Button size="small" theme="link">小小小</Button>
     </div>
     <div>
-      <Button size="big" theme="text">Big</Button>
-      <Button theme="text">Normal</Button>
-      <Button size="small" theme="text">Small</Button>
+      <Button size="big" theme="text">大大大</Button>
+      <Button theme="text">普普通</Button>
+      <Button size="small" theme="text">小小小</Button>
     </div>
   </div>
 </template>

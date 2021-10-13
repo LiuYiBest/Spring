@@ -1,6 +1,7 @@
 <template>
   <button class="spring-button" :class="classes" :disabled="disabled">
     <span v-if="loading" class="spring-loadingIndicator"></span>
+    <span v-if="success" class="spring-SuccessIndicator"></span>
     <slot />
   </button>
 </template>
@@ -27,6 +28,10 @@ export default {
     loading: {
       type: Boolean,
       default: false
+    },
+    success: {
+      type: Boolean,
+      default: false
     }
   },
   setup(props) {
@@ -49,6 +54,7 @@ $color: #333;
 $blue: #40a9ff;
 $radius: 4px;
 $red: red;
+$yellow: #ffb100;
 $grey: grey;
 .spring-button {
   box-sizing: border-box;
@@ -83,7 +89,9 @@ $grey: grey;
     border-color: transparent;
     box-shadow: none;
     color: $blue;
-    &:hover,
+    &:hover {
+      color: blue;
+    }
     &:focus {
       color: lighten($blue, 10%);
     }
@@ -118,6 +126,16 @@ $grey: grey;
         border-color: darken($blue, 10%);
       }
     }
+    &.spring-level-warning {
+      background: $yellow;
+      border-color: $yellow;
+      color: white;
+      &:hover,
+      &:focus {
+        background: darken($yellow, 10%);
+        border-color: darken($yellow, 10%);
+      }
+    }
     &.spring-level-danger {
       background: $red;
       border-color: $red;
@@ -130,6 +148,13 @@ $grey: grey;
     }
   }
   &.spring-theme-link {
+    &.spring-level-warning {
+      color: $yellow;
+      &:hover,
+      &:focus {
+        color: darken($yellow, 10%);
+      }
+    }
     &.spring-level-danger {
       color: $red;
       &:hover,
@@ -144,6 +169,13 @@ $grey: grey;
       &:hover,
       &:focus {
         color: darken($blue, 10%);
+      }
+    }
+    &.spring-level-warning {
+      color: $yellow;
+      &:hover,
+      &:focus {
+        color: darken($red, 10%);
       }
     }
     &.spring-level-danger {
@@ -179,6 +211,16 @@ $grey: grey;
     border-style: solid;
     border-width: 2px;
     animation: spring-spin 1s infinite linear;
+  }
+  > .spring-SuccessIndicator{
+    width: 9px;
+    height: 18px;
+    display: inline-block;
+    margin-right: 6px;
+    border-radius: 8px;
+    border-right:2px solid $red;
+    border-bottom:2px solid   $red;
+    transform: rotate(40deg);
   }
 }
 @keyframes spring-spin {
