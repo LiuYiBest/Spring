@@ -18,6 +18,7 @@ import getStarted from './markdown/get-started.md'
 // @ts-ignore
 import install from './markdown/install.md'
 import InputDemo from './components/Demo/InputDemo.vue'
+import TagDemo from './components/Demo/TagDemo.vue'
 
 const md = string => h(Markdown, { content: string, key: string })
 
@@ -37,7 +38,8 @@ export const router = createRouter({
                 { path: 'button', component: ButtonDemo },
                 { path: 'dialog', component: DialogDemo },
                 { path: 'tabs', component: TabsDemo },
-                { path: 'input', component: InputDemo }
+                { path: 'input', component: InputDemo },
+                { path: 'tag', component: TagDemo },
             ]
         }
     ]
