@@ -2,8 +2,8 @@
   <div class="topNavAndBanner">
     <TopNav />
     <div class="banner">
-      <h1>春风UI</h1>
-      <h2>SpringUI组件库，一款有趣风格的UI组件库</h2>
+      <h1>Spring UI</h1>
+      <h2>春风UI组件库，一款有趣风格的UI组件库</h2>
       <p class="actions">
         <a href="https://github.com/LiuYiBest">Github</a>
         <router-link to="/doc">快速开始</router-link>
@@ -48,12 +48,14 @@ export default {
 
 <style lang="scss" scoped>
 $blue: #414b5b;
-
+h1{
+  font-size: 48px;
+}
 .topNavAndBanner {
   background-image: url('https://typoraimagedemo.oss-cn-shenzhen.aliyuncs.com/Qianduan/image-20210929213815511.jpg');
+  //opacity: 1;
   border-bottom-left-radius: 10% 70px;
   border-bottom-right-radius: 10% 70px;
-  // clip-path: ellipse(50% 50% at 50% 50%);
   z-index: 100;
 }
 .features {
@@ -108,10 +110,10 @@ $blue: #414b5b;
     padding: 8px 0;
     a {
       margin: 0 8px;
-      background: $blue;
+      background: #e5fadb;
       display: inline-block;
       padding: 4px 24px;
-      color: white;
+      color: #1e272e;
       border-radius: 4px;
       &:hover {
         background-color: #397427;

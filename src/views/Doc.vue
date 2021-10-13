@@ -107,6 +107,7 @@ aside {
       }
       .router-link-active {
         background: #fff;
+        transition: background 250ms;
       }
     }
   }
