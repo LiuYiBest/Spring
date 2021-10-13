@@ -5,7 +5,7 @@
            v-for="(title,index) in titles"
            :ref="el => { if (title===selected) selectedItem = el }"
            @click="select(title)"
-           :class="{selected: title=== selected}"
+           :class="navItemClasses(title)"
            :key="index">{{title}}</div>
       <div class="spring-tabs-nav-indicator" ref="indicator"></div>
     </div>
@@ -33,6 +33,10 @@ export default {
     const selectedItem = ref < HTMLDivElement > (null)
     const indicator = ref < HTMLDivElement > (null)
     const container = ref < HTMLDivElement > (null)
+    const navItemClasses = (title) => ({
+      [`spring-tabs-nav-item-disabled`]: disabledItem[title],
+      ["selected"]: title === props.selected,
+    });
     //onMounted只在第一次渲染执行
     onMounted(() => {
       //立即执行传入的一个函数，==同时响应式追踪其依赖==，并在其依赖变更时重新运行该函数
@@ -53,6 +57,17 @@ export default {
         flush: 'post'
       })
     })
+    const disabledItem = context.slots.default().reduce(
+      (obj, tag) =>
+        tag.props["disabled"]
+          ? {
+            ...obj,
+            [tag.props["title"]]: true,
+          }
+          : obj,
+      {}
+    );
+    //获取插槽的内容
     const defaults = context.slots.default()
     defaults.forEach((tag) => {
       // @ts-ignore
@@ -67,6 +82,7 @@ export default {
       return tag.props.title
     })
     const select = (title: string) => {
+      if (Object.keys(disabledItem).indexOf(title) >= 0) return;
       context.emit('update:selected', title)
     }
     return {
@@ -76,7 +92,9 @@ export default {
       select,
       selectedItem,
       indicator,
-      container
+      container,
+      disabledItem,
+      navItemClasses
     }
   }
 }
@@ -101,6 +119,10 @@ $border-color: #d9d9d9;
       }
       &.selected {
         color: $blue;
+      }
+      &.spring-tabs-nav-item-disabled {
+        cursor: not-allowed;
+        color: #dfdfdf;
       }
     }
     &-indicator {
