@@ -22,7 +22,7 @@ export default {
 
 <style lang="scss">
 .tag-demo {
-  .eminent-ui-tag + .eminent-ui-tag {
+  .spring-ui-tag + .spring-ui-tag {
     margin-left: 16px;
   }
 }

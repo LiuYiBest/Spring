@@ -6,12 +6,15 @@
     <Demo :component="Switch1Demo" />
     <hr />
     <Demo :component="Switch2Demo" />
+    <hr />
+    <Demo :component="Switch3Demo" />
   </div>
 </template>
   
   <script lang="ts">
 import Switch1Demo from '../SwitchCom/Switch1.demo.vue'
 import Switch2Demo from '../SwitchCom/Switch2.demo.vue'
+import Switch3Demo from '../SwitchCom/Switch3.demo.vue'
 import Demo from './Demo.vue'
 export default {
   components: {
@@ -21,6 +24,7 @@ export default {
     return {
       Switch1Demo,
       Switch2Demo,
+      Switch3Demo,
     }
   },
 }

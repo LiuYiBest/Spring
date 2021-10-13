@@ -1,9 +1,11 @@
 <template>
   <div
     :class="[
-      'eminent-ui-tag',
-      `eminent-ui-tag-${size}`,
-      `eminent-ui-tag-${type}`,
+      'spring-ui-tag',
+      `spring-ui-tag-${size}`,
+      `spring-ui-tag-${type}`,
+      `spring-ui-tag-${disable}`,
+
     ]"
     :style="{ color: color }"
   >
@@ -14,7 +16,6 @@
 <script lang="ts">
 
 export default {
-  name: "EminentTag",
   props: {
     size: {
       type: String,
@@ -22,7 +23,6 @@ export default {
     },
     color: {
       type: String,
-      default: "#1ABE96",
     },
     type: {
       type: String,
@@ -36,53 +36,49 @@ export default {
       type: String,
       default: "light",
     },
+    disable: {
+      type: Boolean,
+      default: false,
+    }
   },
-  setup(props, context) {
-    console.log(props, context);
-    console.log(Object.entries(props));
-  },
+
 };
 </script>
 
 <style lang="scss">
-$success: #1abe96;
-$warn: #bc1a42;
+$warn: #ffaf5d;
 $info: #38879b;
-.eminent-ui-tag {
-  background-color: #ecf5ff;
+
+.spring-ui-tag {
+  background-color: #fafafa;
   display: inline-block;
-  height: 32px;
+  height: 38px;
   padding: 0 10px;
-  line-height: 30px;
+  line-height: 36px;
   font-size: 12px;
-  color: #409eff;
   border: 1px solid #d9ecff;
   border-radius: 4px;
   box-sizing: border-box;
   white-space: nowrap;
-  &-success {
-  }
+
   &-waring {
-    background-color: #fdf6ec;
-    border-color: #faecd8;
-    color: $warn;
+    background-color:$warn;
+    border-color: $warn;
+    color: black;
   }
   &-danger {
     color: red;
+  }
+  &-disabled{
+    cursor: not-allowed;
+    color: grey;
   }
   &-info {
     background-color: #f4f4f5;
     border-color: #e9e9eb;
     color: #909399;
   }
-  &-medium {
-    height: 28px;
-    line-height: 26px;
-  }
-  &-small {
-    height: 24px;
-    padding: 0 8px;
-    line-height: 22px;
-  }
+
+
 }
 </style>
