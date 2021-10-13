@@ -1,6 +1,12 @@
 <template>
   <label class="wrapper" :class="{error}">
-    <input class="spring-input" type="text" :value="value" :disabled="disabled" :readonly="readonly">
+    <input placeholder="placeholder"
+           class="spring-input"
+           type="text" :value="value"
+           :disabled="disabled"
+           :readonly="readonly"
+           @input="$emit('update:value',$event.target.value)"
+    >
     <template v-if="error">
       <div class="errorMessage">
         <svg class="icon" aria-hidden="true">
@@ -15,12 +21,13 @@
 <script lang='ts'>
 export default {
   props: {
-    value: {type: String,},
+    value: {type: String},
     disabled: {type: Boolean, default: false},
     readonly: {type: Boolean, default: false},
-    error: {type: String,}
+    error: {type: String},
+    placeholder:{type: String}
   },
-  setup(){}
+
 };
 </script>
 
@@ -44,7 +51,9 @@ export default {
       border-color: #1a64ea;
     }
     &[disabled], &[readonly] {
-      border-color: #ccc;color: #ccc;cursor: not-allowed;
+      border-color: #ccc;
+      color: #ccc;cursor:
+      not-allowed;
     }
   }
   &.error {
@@ -53,7 +62,8 @@ export default {
     }
   }
   > .errorMessage {
-    color: #f1453d;vertical-align: bottom;
+    color: #f1453d;
+    vertical-align: bottom;
   }
   .icon{
     height: 20px;

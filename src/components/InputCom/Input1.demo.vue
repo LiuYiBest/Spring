@@ -1,8 +1,9 @@
 <demo>
-  4个不同类型的input输入框
+  5个不同类型的input输入框
 </demo>
 
 <template>
+  <Input  placeholder/>
   <Input  value="Please input"/>
   <Input  value="Disabled input" disabled />
   <Input  value="Readonly"  readonly />
