@@ -1,10 +1,13 @@
 <template>
-  <div class="gulu-tabs">
-    <div class="gulu-tabs-nav" ref="container">
-      <div class="gulu-tabs-nav-item" v-for="(t,index) in titles" :ref="el => { if (t===selected) selectedItem = el }" @click="select(t)" :class="{selected: t=== selected}" :key="index">{{t}}</div>
-      <div class="gulu-tabs-nav-indicator" ref="indicator"></div>
+  <div class="spring-tabs">
+    <div class="spring-tabs-nav" ref="container">
+      <div class="spring-tabs-nav-item" v-for="(title,index) in titles"
+           :ref="el => { if (title===selected) selectedItem = el }"
+           @click="select(title)" :class="{selected: title=== selected}"
+           :key="index">{{title}}</div>
+      <div class="spring-tabs-nav-indicator" ref="indicator"></div>
     </div>
-    <div class="gulu-tabs-content">
+    <div class="spring-tabs-content">
       <component :is="current" :key="current.props.title" />
     </div>
   </div>
@@ -28,7 +31,9 @@ export default {
     const selectedItem = ref < HTMLDivElement > (null)
     const indicator = ref < HTMLDivElement > (null)
     const container = ref < HTMLDivElement > (null)
+    //onMounted只在第一次渲染执行
     onMounted(() => {
+      //立即执行传入的一个函数，==同时响应式追踪其依赖==，并在其依赖变更时重新运行该函数
       watchEffect(() => {
         const {
           width
@@ -50,7 +55,7 @@ export default {
     defaults.forEach((tag) => {
       // @ts-ignore
       if (tag.type.name !== Tab.name) {
-        throw new Error('Tabs 子标签必须是 Tab')
+        throw new Error('Tabs Child label must be Tab')
       }
     })
     const current = computed(() => {
@@ -79,7 +84,7 @@ export default {
 $blue: #40a9ff;
 $color: #333;
 $border-color: #d9d9d9;
-.gulu-tabs {
+.spring-tabs {
   &-nav {
     display: flex;
     color: $color;

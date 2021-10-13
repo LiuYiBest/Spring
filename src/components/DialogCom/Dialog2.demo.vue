@@ -1,16 +1,16 @@
   
 <demo>
     一键打开 Dialog
-    </demo>
+ </demo>
     <template>
   <div>
     <Button @click="showDialog">打开对话框</Button>
   </div>
 </template>
     
-    <script lang="ts">
+<script lang="ts">
 import Button from '../../lib/Button.vue'
-import { ref, h } from 'vue'
+import {  h } from 'vue'
 import { openDialog } from '../../lib/openDialog'
 export default {
   components: {

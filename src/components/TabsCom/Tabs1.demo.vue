@@ -3,7 +3,7 @@
   基本使用
     </demo>
     <template>
-  <Tabs v-model:selected="x">
+  <Tabs v-model:selected="selected">
     <Tab title="导航1"
       >Vue (读音 /vjuː/，类似于 view)
       是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue
@@ -26,9 +26,9 @@ export default {
     Tab,
   },
   setup() {
-    const x = ref('导航2')
+    const selected = ref('导航2')
     return {
-      x,
+      selected,
     }
   },
 }

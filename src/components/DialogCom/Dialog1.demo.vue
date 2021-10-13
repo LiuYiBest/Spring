@@ -5,17 +5,17 @@
   <div>
     <Button @click="toggle">打开对话框</Button>
     <Dialog
-      v-model:visible="x"
+      v-model:visible="visible"
       :closeOnClickOverlay="false"
       :ok="f1"
       :cancel="f2"
     >
-      <template v-slot:content>
-        <strong>提示用户</strong>
-        <div>警告</div>
-      </template>
       <template v-slot:title>
-        <strong>标题</strong>
+        <strong>title</strong>
+      </template>
+      <template v-slot:content>
+        <strong>提示信息</strong>
+        <div>警告</div>
       </template>
     </Dialog>
   </div>
@@ -25,23 +25,22 @@
 import Dialog from '../../lib/Dialog.vue'
 import Button from '../../lib/Button.vue'
 import { ref } from 'vue'
-import { openDialog } from '../../lib/openDialog'
 export default {
   components: {
     Dialog,
     Button,
   },
   setup() {
-    const x = ref(false)
+    const visible = ref(false)
     const toggle = () => {
-      x.value = !x.value
+      visible.value = !visible.value
     }
     const f1 = () => {
       return false
     }
     const f2 = () => {}
     return {
-      x,
+      visible,
       toggle,
       f1,
       f2,

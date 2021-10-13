@@ -1,12 +1,14 @@
 <template>
   <template v-if="visible">
     <Teleport to="body">
-      <div class="gulu-dialog-overlay" @click="onClickOverlay"></div>
-      <div class="gulu-dialog-wrapper">
-        <div class="gulu-dialog">
+      <!--遮罩层-->
+      <div class="spring-dialog-overlay" @click="onClickOverlay"></div>
+        <!--对话框-->
+      <div class="spring-dialog-wrapper">
+        <div class="spring-dialog">
           <header>
             <slot name="title" />
-            <span class="gulu-dialog-close" @click="close"></span>
+            <span class="spring-dialog-close" @click="close"></span>
           </header>
           <main>
             <slot name="content" />
@@ -70,7 +72,7 @@ export default {
 <style lang="scss">
 $radius: 4px;
 $border-color: #d9d9d9;
-.gulu-dialog {
+.spring-dialog {
   background: white;
   border-radius: $radius;
   box-shadow: 0 0 3px fade_out(black, 0.5);
