@@ -1,5 +1,5 @@
 <demo>
-  5个不同类型的input输入框
+  5种不同类型的input输入框
 </demo>
 
 <template>

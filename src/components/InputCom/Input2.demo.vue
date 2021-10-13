@@ -8,7 +8,7 @@
   <Input   v-model:value="message"/>
   <br />
   <Input   v-model:value="message"/>
-
+  <div>Input实现双向绑定：{{message}}</div>
 </template>
 
 <script lang='ts'>
