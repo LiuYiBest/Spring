@@ -5,4 +5,5 @@ export { default as Tab } from './Tab.vue';
 export { default as Dialog } from './Dialog.vue';
 export { default as Input } from './Input.vue';
 export { default as Tag } from './Tag.vue';
+export { default as Radio } from './Radio.vue';
 export { openDialog } from './openDialog';

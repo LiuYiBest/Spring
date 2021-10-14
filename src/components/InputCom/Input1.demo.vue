@@ -3,7 +3,7 @@
 </demo>
 
 <template>
-  <Input  placeholder/>
+  <Input  placeholder="placeholder" />
   <Input  value="Please input"/>
   <Input  value="Disabled input" disabled />
   <Input  value="Readonly"  readonly />

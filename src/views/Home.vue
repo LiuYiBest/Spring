@@ -54,13 +54,14 @@ h1{
   font-size: 40px;
 }
 .topNavAndBanner {
-  background: url('https://typoraimagedemo.oss-cn-shenzhen.aliyuncs.com/Qianduan/image-20211014160610088 .png') no-repeat;
+  background: url('https://typoraimagedemo.oss-cn-shenzhen.aliyuncs.com/Qianduan/image-202110141955141831.png') no-repeat;
   //opacity: 1;
   background-size:100% 100%;
   border-bottom-left-radius: 10% 70px;
   border-bottom-right-radius: 10% 70px;
   z-index: 100;
 }
+
 .features {
   margin: 64px auto;
   width: 400px;
@@ -119,7 +120,7 @@ h1{
       color: #1e272e;
       border-radius: 4px;
       &:hover {
-        background-color: #397427;
+        background-color: #c7f1ee;
         transition-duration: 250ms;
       }
     }

@@ -11,9 +11,11 @@
   >
     <slot />
   </div>
+
 </template>
 
 <script lang="ts">
+
 
 export default {
   props: {
@@ -28,14 +30,7 @@ export default {
       type: String,
       default: "",
     },
-    closeable: {
-      type: Boolean,
-      default: false,
-    },
-    effect: {
-      type: String,
-      default: "light",
-    },
+
     disable: {
       type: Boolean,
       default: false,
