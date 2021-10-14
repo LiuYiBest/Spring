@@ -1,5 +1,5 @@
 <demo>
-  不可用状态：Switch禁用中
+  Switch禁用中
   </demo>
   <template>
   <Switch   v-model:value="bool" disabled />

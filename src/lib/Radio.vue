@@ -18,11 +18,9 @@ export default {
   props: {
     label: {
       type: String,
-      required: true,
     },
     value: {
       type: String,
-      required: true,
     },
     disabled: {
       type: Boolean,

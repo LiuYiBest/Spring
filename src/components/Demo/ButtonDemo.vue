@@ -2,7 +2,7 @@
   <div>
     <h1>Button 按钮组件</h1>
     <hr />
-    <p>Button 组件可以响应用户的点击操作。</p>
+    <p>Button按钮组件可以响应用户的点击操作。</p>
     <Demo :component="Button1Demo" />
     <hr />
     <Demo :component="Button2Demo" />

@@ -4,12 +4,13 @@
 然后在你的代码中写入下面的代码
 
 ```
-import {Button, Tabs, Switch, Dialog} from "spring-ui"
+import {Button, Tabs, Switch, Dialog, Input, Tag, Radio} from "spring-ui"
 ```
 
-就可以使用我提供的组件了。
+然后就可以使用我提供的组件啦。
 
 ## Vue 单文件组件
+举个例子，比如在开发中使用Button按钮组件。
 
 代码示例：
 
@@ -20,7 +21,7 @@ import {Button, Tabs, Switch, Dialog} from "spring-ui"
   </div>
 </template>
 <script>
-import {Button, Tabs, Switch, Dialog} from "spring-ui"
+import {Button} from "spring-ui"
 export default {
   components: {Button}
 }

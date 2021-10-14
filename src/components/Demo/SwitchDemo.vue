@@ -2,7 +2,7 @@
   <div>
     <h1>Switch 开关组件</h1>
     <hr />
-    <p>Switch 开关组件. 开关控制能切换单个设置的开/关两个状态。</p>
+    <p>Switch开关组件， 能控制切换单个设置的开/关两种状态。</p>
     <Demo :component="Switch1Demo" />
     <hr />
     <Demo :component="Switch2Demo" />

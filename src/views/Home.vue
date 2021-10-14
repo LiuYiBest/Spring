@@ -18,8 +18,8 @@
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#icon-vue"></use>
         </svg>
-        <h3>基于 Vue 3</h3>
-        <p>使用了最新的 Vue 3 Composition API开发</p>
+        <h3>基于 Vue3</h3>
+        <p>使用了最新的Vue3 Composition API开发</p>
       </li>
       <li>
         <svg class="icon" aria-hidden="true">
@@ -33,7 +33,7 @@
           <use xlink:href="#icon-light"></use>
         </svg>
         <h3>代码易读</h3>
-        <p>每个组件的源代码都根据开发中需求所制定</p>
+        <p>每个组件的源代码都根据开发需求所制定</p>
       </li>
     </ul>
   </div>
@@ -114,13 +114,13 @@ h1{
     padding: 8px 0;
     a {
       margin: 0 8px;
-      background: #e5fadb;
+      background: #c7f1ee;
       display: inline-block;
       padding: 4px 24px;
       color: #1e272e;
       border-radius: 4px;
       &:hover {
-        background-color: #c7f1ee;
+        background-color: #e5fadb;
         transition-duration: 250ms;
       }
     }

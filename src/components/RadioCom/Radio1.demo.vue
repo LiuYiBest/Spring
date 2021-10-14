@@ -1,11 +1,11 @@
 <demo>
-基础用法
+基本使用
 </demo>
 
 <template>
-  <Radio label="1" v-model:value="labelVal">学习</Radio>
-  <Radio label="0" v-model:value="labelVal">娱乐</Radio>
-  <div class="picked">Picked:{{labelVal}}</div>
+  <Radio label="1" v-model:value="labelVal">Vue</Radio>
+  <Radio label="2" v-model:value="labelVal">React</Radio>
+  <Radio label="3" v-model:value="labelVal">Angular</Radio>
 </template>
 
 <script lang="ts">
@@ -23,7 +23,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.picked{
-  padding: 10px 0;
-}
+
 </style>

@@ -1,11 +1,11 @@
 <demo>
-基础用法
+ 禁用单选
 </demo>
 
 <template>
-  <Radio label="1" v-model:value="labelVal" disabled>学习</Radio>
-  <Radio label="0" v-model:value="labelVal" disabled>娱乐</Radio>
-  <div class="picked">Picked:{{labelVal}}</div>
+  <Radio label="1" v-model:value="labelVal" disabled>Vue</Radio>
+  <Radio label="2" v-model:value="labelVal" disabled>React</Radio>
+  <Radio label="3" v-model:value="labelVal" disabled>Angular</Radio>
 </template>
 
 <script lang="ts">
@@ -16,14 +16,7 @@ export default {
   components:{Radio},
   setup(){
     const labelVal = ref('1')
-
     return {labelVal}
   }
 };
 </script>
-
-<style lang="scss" scoped>
-.picked{
-  padding: 10px 0;
-}
-</style>

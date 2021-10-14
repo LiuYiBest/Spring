@@ -1,7 +1,10 @@
 
 <template>
   <div>
+
     <h1>Radio 单选组件</h1>
+    <hr>
+    <p>单选框用于从选择组合中仅选取一项</p>
     <Demo :component="Radio1Demo"/>
     <Demo :component="Radio2Demo"/>
     <Demo :component="Radio3Demo"/>
@@ -31,19 +34,33 @@ export default {
   setup() {
     const data = ref([
       {
-        params: 'label',
-        desc: '相当于原生radio标签的value',
-        type: 'string / number / boolean',
-        select: '自定义',
-        default: '自定义',
+        params: 'value',
+        desc: '文本说明',
+        type: 'string',
+        select: 'default',
+        default: 'null',
       },
       {
-        params: 'v-model:value',
-        desc: '双向绑定',
-        type: '随着label属性类型改变',
-        select: '自定义',
-        default: 'label属性中的任意一个值',
+        params: 'label',
+        desc: '所选内容',
+        type: 'string',
+        select: 'labelVal',
+        default: '—\n',
       },
+      {
+        params: 'disable',
+        desc: '禁止选择',
+        type: 'boolean',
+        select: 'false / true',
+        default: 'false',
+      },
+      {
+        params: 'v-model',
+        desc: '默认绑定',
+        type: 'string',
+        select: 'labelVal',
+        default: '—\n',
+      }
     ]);
     return {Radio1Demo, Radio2Demo, Radio3Demo,data, columns};
   }

@@ -1,11 +1,12 @@
 <demo>
-  单标签 - 用 label 代替内容
+  内容替换
 </demo>
 
 <template>
-  <Radio label="学习" v-model:value="labelVal" />
-  <Radio label="娱乐" v-model:value="labelVal" />
-  <div class="picked">Picked:{{labelVal}}</div>
+  <Radio label="Vue" v-model:value="labelVal" />
+  <Radio label="React" v-model:value="labelVal" />
+  <Radio label="Angular" v-model:value="labelVal" />
+  <div class="frame">frame:{{labelVal}}</div>
 </template>
 
 <script lang="ts">
@@ -16,15 +17,14 @@ export default {
   name: 'RadioDemo2',
   components:{Radio},
   setup(){
-    const labelVal = ref('娱乐')
-
+    const labelVal = ref('Vue')
     return {labelVal}
   }
 };
 </script>
 
 <style lang="scss" scoped>
-.picked{
+.frame{
   padding: 10px 0;
 }
 </style>

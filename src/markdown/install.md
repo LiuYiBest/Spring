@@ -6,7 +6,7 @@
 npm install spring-ui
 ```
 
-或
+或者
 
 ```
 yarn add spring-ui

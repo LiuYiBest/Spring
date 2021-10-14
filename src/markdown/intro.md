@@ -9,14 +9,14 @@
 
 2.支持ES6+，以及Typescript静态类型检查。
 
-3.使用Vite构建工具以及Rollup配置打包库文件，
+3.使用Vite构建工具以及Rollup配置打包库文件。
 
-4.项目发布到NPM官网，且持续更新版本，
+4.项目发布到NPM官网，且持续更新版本。
 
-5.趣的UI风格，图片和Icon使用原神相关元素，
+5.趣的UI风格，图片和Icon使用原神相关元素。
 
 # 源码仓库
 
-但是，如果您想查看源代码，那么您绝对来对地方了。所有源代码都存储在Github中，可以查看每个组件的源代码，链接如下：[SpringUI](https://github.com/LiuYiBest/Spring)
+如果您想查看源代码，那么您绝对来对地方了。所有源代码都存储在Github中，可以查看每个组件的源代码，链接如下：[SpringUI组件库](https://github.com/LiuYiBest/Spring)
 
 下一节：[安装](#/doc/install)

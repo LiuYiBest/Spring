@@ -65,6 +65,7 @@ $blue: #0b3f1e;
     display: flex;
     white-space: nowrap;
     flex-wrap: nowrap;
+    color: #20aeff;
     a {
       margin: 0 8px;
       display: inline-block;

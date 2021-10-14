@@ -1,5 +1,5 @@
 <template>
-  <h1>Tabs 切換组件</h1>
+  <h1>Tabs 选项卡组件</h1>
   <hr />
   <p>使用选项卡，你可以轻松地浏览和切换不同的视图。</p>
   <Demo :component="Tabs1Demo" />
@@ -31,6 +31,13 @@ export default {
         type: 'string',
         select: 'index',
         default: 'index',
+      },
+      {
+        params: 'title',
+        desc: '选项标题',
+        type: 'string',
+        select: 'string',
+        default: 'null',
       },
       {
         params: 'disabled',
