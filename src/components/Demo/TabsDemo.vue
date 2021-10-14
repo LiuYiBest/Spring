@@ -1,5 +1,5 @@
 <template>
-  <h1>Tabs 组件</h1>
+  <h1>Tabs 切換组件</h1>
   <hr />
   <p>使用选项卡，你可以轻松地浏览和切换不同的视图。</p>
   <Demo :component="Tabs1Demo" />

@@ -57,6 +57,7 @@ $red: red;
 $yellow: #ffb100;
 $grey: grey;
 .spring-button {
+  margin-top: 4px;
   box-sizing: border-box;
   height: $h;
   padding: 0 12px;

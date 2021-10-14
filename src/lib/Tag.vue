@@ -50,7 +50,7 @@ $warn: #ffaf5d;
 $info: #38879b;
 
 .spring-ui-tag {
-  background-color: #fafafa;
+  background-color: white;
   display: inline-block;
   height: 38px;
   padding: 0 10px;

@@ -1,5 +1,5 @@
 <demo>
-  用法
+  基本使用
 </demo>
 <template>
   <div class="tags-wrap">

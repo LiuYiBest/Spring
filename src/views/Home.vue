@@ -54,8 +54,9 @@ h1{
   font-size: 40px;
 }
 .topNavAndBanner {
-  background-image: url('https://typoraimagedemo.oss-cn-shenzhen.aliyuncs.com/Qianduan/image-20211013192739220.jpg');
+  background: url('https://typoraimagedemo.oss-cn-shenzhen.aliyuncs.com/Qianduan/image-20211014160610088 .png') no-repeat;
   //opacity: 1;
+  background-size:100% 100%;
   border-bottom-left-radius: 10% 70px;
   border-bottom-right-radius: 10% 70px;
   z-index: 100;
