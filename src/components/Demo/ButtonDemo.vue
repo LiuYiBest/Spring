@@ -32,7 +32,6 @@ import {ref} from 'vue';
 
 
 export default {
-  name: 'ButtonDemo',
 
   components: {
     Demo,
@@ -45,21 +44,35 @@ export default {
         params: 'theme',
         desc: '按钮颜色',
         type: 'string',
-        select: 'primary / warning / success / danger / info / link',
+        select: 'link / text ',
         default: 'default',
       },
       {
         params: 'size',
-        desc: '尺寸大小',
+        desc: '按钮尺寸',
         type: 'string',
-        select: 'small / normal / large',
-        default: 'normal',
+        select: 'big / small',
+        default: 'default',
+      },
+      {
+        params: 'level',
+        desc: '提示等级',
+        type: 'string',
+        select: 'main / warning / danger',
+        default: 'default',
+      },
+      {
+        params: 'disabled',
+        desc: '禁用按钮',
+        type: 'boolean',
+        select: 'false / true ',
+        default: 'false',
       },
       {
         params: 'loading',
-        desc: '是否加载',
+        desc: '加载状态',
         type: 'boolean',
-        select: 'false / true',
+        select: 'false / true ',
         default: 'false',
       }
     ]);

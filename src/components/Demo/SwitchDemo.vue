@@ -8,6 +8,8 @@
     <Demo :component="Switch2Demo" />
     <hr />
     <Demo :component="Switch3Demo" />
+    <Attr :columns="columns" :data="data"/>
+
   </div>
 </template>
   
@@ -16,15 +18,48 @@ import Switch1Demo from '../SwitchCom/Switch1.demo.vue'
 import Switch2Demo from '../SwitchCom/Switch2.demo.vue'
 import Switch3Demo from '../SwitchCom/Switch3.demo.vue'
 import Demo from './Demo.vue'
+
+
+import Attr from '../../components/Attributes.vue';
+import DocTitle from '../DocTitle.vue';
+import {columns} from '../../lib/data';
+import {ref} from 'vue';
 export default {
   components: {
     Demo,
+    Attr,
+    DocTitle
   },
   setup() {
+    const data = ref([
+      {
+        params: 'value',
+        desc: '开关状态',
+        type: 'boolean',
+        select: 'false / true ',
+        default: 'false',
+      },
+      {
+        params: 'disabled',
+        desc: '禁用按钮',
+        type: 'boolean',
+        select: 'false / true ',
+        default: 'false',
+      },
+      {
+        params: 'size',
+        desc: '按钮尺寸',
+        type: 'string',
+        select: 'big / normal /small',
+        default: 'normal',
+      }
+    ]);
     return {
       Switch1Demo,
       Switch2Demo,
       Switch3Demo,
+      columns,
+      data
     }
   },
 }

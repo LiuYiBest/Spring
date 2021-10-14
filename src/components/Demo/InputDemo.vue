@@ -15,6 +15,8 @@
   </section>
     <Demo :component="Input1Demo" />
     <Demo :component="Input2Demo" />
+    <Attr :columns="columns" :data="data"/>
+
   </div>
 </template>
 
@@ -23,14 +25,49 @@ import Input1Demo from '../InputCom/Input1.demo.vue';
 import Input2Demo from '../InputCom/Input2.demo.vue';
 import Demo from './Demo.vue'
 
+import Attr from '../../components/Attributes.vue';
+import DocTitle from '../DocTitle.vue';
+import {columns} from '../../lib/data';
+import {ref} from 'vue';
+
 export default {
   components:{
     Input1Demo,
     Input2Demo,
-    Demo
+    Demo,
+    Attr,
+    DocTitle
   },
   setup(){
-    return {Input1Demo,Input2Demo}
+    const data = ref([
+      {
+        params: 'value',
+        desc: '输入框类型',
+        type: 'string',
+        select: 'placeholder / default /  readonly / error ',
+        default: 'default',
+      },
+      {
+        params: 'disable',
+        desc: '禁止输入',
+        type: 'boolean',
+        select: 'false / true',
+        default: 'false',
+      },
+      {
+        params: 'v-model',
+        desc: '默认绑定',
+        type: 'string',
+        select: 'message',
+        default: '—\n',
+      }
+    ]);
+    return {
+      Input1Demo,
+      Input2Demo,
+      columns,
+      data
+    }
   }
 }
 </script>
