@@ -3,7 +3,6 @@
           @click="toggle" :class="classes"  :disabled="disabled">
     <span></span>
   </button>
-<!--  :class="{'spring-checked':value}"-->
 </template>
 
 <script lang="ts">

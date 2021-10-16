@@ -5,7 +5,7 @@
       <h1>Spring UI</h1>
       <h2>春风UI组件库，一款有趣风格的UI组件库</h2>
       <p class="actions">
-        <a href="https://github.com/LiuYiBest">Github</a>
+        <a href="https://github.com/LiuYiBest/Spring">Github</a>
         <router-link to="/doc">
           开始使用
         </router-link>
