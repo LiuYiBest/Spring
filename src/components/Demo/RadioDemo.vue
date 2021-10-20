@@ -4,7 +4,7 @@
 
     <h1>Radio 单选组件</h1>
     <hr>
-    <p>单选框用于从选择组合中仅选取一项</p>
+    <p>单选框用于从选择组合中仅选取一项。</p>
     <Demo :component="Radio1Demo"/>
     <Demo :component="Radio2Demo"/>
     <Demo :component="Radio3Demo"/>

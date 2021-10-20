@@ -21,11 +21,21 @@
 <script lang='ts'>
 export default {
   props: {
-    value: {type: String},
-    disabled: {type: Boolean, default: false},
-    readonly: {type: Boolean, default: false},
-    error: {type: String},
-    placeholder:{type: String}
+    value: {
+      type: String
+    },
+    disabled: {
+      type: Boolean, default: false
+    },
+    readonly: {
+      type: Boolean, default: false
+    },
+    error: {
+      type: String
+    },
+    placeholder:{
+      type: String
+    }
   },
 
 };
