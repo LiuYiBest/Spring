@@ -32,7 +32,8 @@ import {Button} from "spring-ui"
 export default {
   components: {Button}
 }
-</script>```
+</script>
+```
 
 ## 已有组件
 - [x] Switch 开关
