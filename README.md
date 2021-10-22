@@ -41,7 +41,7 @@ export default {
 - [x] Dialog 对话框
 - [x] Tabs 选项卡
 - [x] Input 输入框
-- [x] Tas 标签
+- [x] Tags 标签
 - [x] Radio 单选
 - [ ] 更多 ...
 
