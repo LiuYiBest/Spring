@@ -35,7 +35,7 @@ export default {
 </script>
 ```
 
-## 已有组件
+## 现有组件
 - [x] Switch 开关
 - [x] Button 按钮
 - [x] Dialog 对话框
